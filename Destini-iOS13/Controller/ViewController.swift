@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func choiceButtonPressed(_ sender: UIButton) {
-        storyBrain.nextQuestion()
+        storyBrain.nextQuestion(sender.currentTitle!)
         
         Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false )
     }
